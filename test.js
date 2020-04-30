@@ -54,7 +54,7 @@ function busca(novo_item){
         error: function(result){
             console.log(result);
         }
-    })
+    },3000)
     
 }
 
