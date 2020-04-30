@@ -40,7 +40,7 @@ function busca(novo_item){
 
     console.log(`http://www.omdbapi.com/?apikey=6b325277&s='${novo_item}'`)
     $.ajax({
-        url: `http://www.omdbapi.com/?apikey=6b325277&s='${novo_item}'`,
+        url: `https://www.omdbapi.com/?apikey=6b325277&s='${novo_item}'`,
 
         contentType: "application/json",
         dataType : "jsonp",
