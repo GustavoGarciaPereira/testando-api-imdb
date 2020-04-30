@@ -1,5 +1,6 @@
 
-const are = ['gustavo', 'manoela', 'mariana']
+//const are = ['gustavo', 'manoela', 'mariana']
+const are = ['', '', '']
 
 
 const lista =  are.map(function lista(nome) {
