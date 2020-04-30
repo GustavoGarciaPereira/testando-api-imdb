@@ -21,13 +21,13 @@ document.getElementById('item').addEventListener('keypress',(e)=>{
     }
 },false)
 
-//function adicionar(){
-//    const novo_item = document.getElementById("item").value
-//    if (novo_item != '' && novo_item.length >= 3){
-//        document.getElementById("lista").innerHTML += `<li>${novo_item}</li>`
-//        document.getElementById("item").value = ''
-//    }
-//}
+function adicionar(){
+    const novo_item = document.getElementById("item").value
+    if (novo_item != '' && novo_item.length >= 3){
+        document.getElementById("lista").innerHTML += `<li>${novo_item}</li>`
+        document.getElementById("item").value = ''
+    }
+}
 
 function busca(){
     const novo_item = document.getElementById("item").value
