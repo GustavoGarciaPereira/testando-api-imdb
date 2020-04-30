@@ -1,6 +1,6 @@
 
 //const are = ['gustavo', 'manoela', 'mariana']
-const are = ['', '', '']
+const are = []
 
 
 const lista =  are.map(function lista(nome) {
@@ -8,16 +8,19 @@ const lista =  are.map(function lista(nome) {
 })
 
 function add(){
-    adicionar()
+    const valor = adicionar()
+    busca(valor)
 }
 
-document.getElementById('item').addEventListener('blur',(event)=>{
-    adicionar()
-})
+//document.getElementById('item').addEventListener('blur',(event)=>{
+//    const valor = adicionar()
+//    busca(valor)
+//})
 
 document.getElementById('item').addEventListener('keypress',(e)=>{
     if(e.which == 13){
-        adicionar()
+        const valor = adicionar()
+        busca(valor)
     }
 },false)
 
@@ -25,18 +28,20 @@ function adicionar(){
     const novo_item = document.getElementById("item").value
     if (novo_item != '' && novo_item.length >= 3){
         document.getElementById("lista").innerHTML += `<li>${novo_item}</li>`
-        document.getElementById("item").value = ''
+        
     }
+    return novo_item
 }
 
-function busca(){
-    const novo_item = document.getElementById("item").value
-    //console.log("busca",novo_item)
+function busca(novo_item){
+    //const novo_item = document.getElementById("item").value
+
     //console.log(document.getElementById("item"))
 
-
+    console.log(`http://www.omdbapi.com/?apikey=6b325277&s='${novo_item}'`)
     $.ajax({
         url: `http://www.omdbapi.com/?apikey=6b325277&s='${novo_item}'`,
+
         contentType: "application/json",
         dataType : "jsonp",
         success: function(result){
@@ -50,6 +55,7 @@ function busca(){
             console.log(result);
         }
     })
+    
 }
 
 teste = [
