@@ -49,7 +49,6 @@ function busca(novo_item){
             result.Search.map(function(dados){
                 mostrar_dados_tela(dados)
             });
-        
         },
         error: function(result){
             console.log(result);
