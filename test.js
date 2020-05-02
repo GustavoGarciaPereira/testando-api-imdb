@@ -38,9 +38,8 @@ function busca(novo_item){
 
     //console.log(document.getElementById("item"))
 
-    console.log(`http://www.omdbapi.com/?apikey=6b325277&s='${novo_item}'`)
-    $.ajax({
-        url: `https://www.omdbapi.com/?apikey=6b325277&s='${novo_item}'`,
+   $.ajax({
+        url: ``,
 
         contentType: "application/json",
         dataType : "jsonp",
@@ -118,6 +117,3 @@ function limpar_tela(){
     document.getElementById("dados").innerHTML = ''
     document.getElementById("poster").innerHTML = ''
 }
-
-//detalhes
-//http://www.omdbapi.com/?i=tt0211915&apikey=6b325277
